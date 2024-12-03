@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta name="author" content="Palatin Simon">
+    <meta name="description" content="Foglalas oldal">
+    <link rel="icon" type="img" href="header_kepek/favicon.png">
+    <title>Pala Apartman</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.js"></script> 
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({
+                rules: {
+                    nev: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    tel: {
+                        minlength: 10,
+                        required: true
+                    },
+                    cim: "required"
+                },
+
+                messages: {
+                    nev: " Írd be a teljes neved!",
+                    email: " Megfelelő email cím!",
+                    tel: {
+                        required: " Adja meg a telefon számát!",
+                        minlength: " Legalább 12 karakter hosszú legyen!"
+                    },
+                    cim: " Írd be a teljes lakcímet!",
+                },
+            });
+        });
+
+
+    </script>
+    <style>
+        label.error {
+        color: #FB3A3A;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="infok_bal">
+                <img src="header_kepek/telefon_header.png" alt="Telefon_kep" class="icon"> Tel: <span
+                    class="tel_alahuzas">+36 30 529
+                    0257</span>
+            </div>
+            <div class="header_nev">
+                Pala Apartman
+            </div>
+            <div class="infok_jobb">
+                <img src="header_kepek/lokacio_header.png" alt="lokacio_kep" class="icon"> Herceghalom Búzavirág utca
+                12.
+            </div>
+
+        </header>
+
+        <img class="felso" src="header_kepek/balaton.jpg" alt="balaton">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Otthon</a></li>
+                <li><a href="Galeria.html">Galéria</a></li>
+                <li><a href="Apartmanok.html">Apartmanok</a></li>
+                <li><a class="current" href="#">Foglalás</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="myform" novalidate>
+        <div class="kontener">
+
+
+            <!-- foglalas -->
+            <div class="foglalasurlap">
+                Az ön foglalása <br>
+                <label>Apartman<br>
+                    <select class="belsoszinek" name="Apartman" id="apartman">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </label><br>
+
+                <label for="gyerekdb">Gyerek 1-14</label><br>
+                <select class="belsoszinek" name="gyerekdb" id="gyerekdb">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="4">5</option>
+                    <option value="4">6</option>
+                </select>
+                <br>
+
+                <label for="felnottdb">Felnőtt</label><br>
+                <select class="belsoszinek" name="felnottdb" id="felnottdb">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="4">5</option>
+                    <option value="4">6</option>
+                </select>
+            </div>
+
+            <!-- Datum -->
+            <div class="datum">
+                <label for="erkezes">Érkezés:<br></label>
+                <input class="belsoszinek" type="date" name="erkezes" id="erkezes"><br>
+                <label for="tavozas">Távozás:<br></label>
+                <input class="belsoszinek" type="date" name="tavozas" id="tavozas"><br>
+            </div>
+
+            <!-- Szemelyes -->
+            <div class="szemelyes">
+                <label for="nev">Teljes név: </label>
+                <input class="belsoszinek" type="text" name="nev" id="nev">
+                <br><br>
+                <label for="email">Email cím: </label>
+                <input class="belsoszinek" type="text" name="email" id="email">
+                <br><br>
+                <label for="tel">Telefonszám: </label>
+                <input class="belsoszinek" type="tel" name="tel" id="tel" value="+">
+                <br><br>
+                <label for="cim">Teljes lakcím: </label>
+                <input class="belsoszinek" type="text" name="cim" id="cim">
+                <br><br>
+                <label for="spec">Különleges kívánság:<br></label>
+                <textarea class="belsoszinek spec" name="spec" id="spec"> </textarea>
+
+            </div>
+
+            <!-- Szolgaltatasok-->
+            <div class="szolgur">
+                <label for="allat">Háziállat: </label>
+                <input type="checkbox" name="allat" value="allat" id="allat">
+                <br><br>
+                <label for="serult">Mozgáskorlátozott: </label>
+                <input type="checkbox" name="serult" value="serult" id="serult">
+                <br><br>
+                <label for="gyagy">Gyerekágy: </label>
+                <input type="checkbox" name="gyagy" value="gyagy" id="gyagy">
+                <br><br>
+                <label for="matrac">Extra matrac: </label>
+                <input type="checkbox" name="matrac" value="matrac" id="matrac">
+                <br><br>
+                <label for="vegsoar">Végső ár / éjszaka: </label>
+                <input class="belsoszinek" type="text" id="vegsoar">
+                <br><br>
+                <input class="belsoszinek" type="button" id="szamolas" value="Összegzés">
+            </div>
+
+
+
+
+            <!-- bekuldes, ujrakezdes -->
+            <div class="bekuld">
+                <input class="belsoszinek" type="submit" value="Lefoglalás"> <input class="belsoszinek" type="reset">
+            </div>
+
+
+        </div>
+    </form>
+
+
+    <footer>
+        Designed by: Palatin Simon
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

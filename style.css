@@ -1,0 +1,367 @@
+/* alap */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #DED1BA;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #CAB691;
+    padding: 20px;
+    text-align: center;
+    flex-basis: 100%;
+
+}
+
+.infok_bal,
+.infok_jobb {
+    /*itt kell majd szamitogepnel szelre rakni*/
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}
+
+.header_nev {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+}
+
+/* Minden oldalon felso kep */
+.felso {
+    flex-basis: 100%;
+    display: block;
+}
+
+
+
+/* NAV */
+nav {
+    flex-basis: 100%;
+    height: 20%;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 20px;
+    gap: 10px;
+}
+
+nav ul li {
+    flex-basis: 45%;
+    max-width: 45%;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    /* conatiner teljes betoltese, uj sorba kezd */
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #CAB691;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #AF905A;
+    color: black;
+}
+
+.current {
+    background-color: #8A7042;
+}
+
+
+/*leiras*/
+
+.leiras1 {
+    flex-basis: 75%;
+    border: 2px solid #8A7042;
+    text-align: center;
+}
+
+
+/* Szolgaltatasok */
+
+h2.szolgcim {
+    background-color: #CAB691;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.szoveg {
+    flex-basis: 80%;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.szolg_icon {
+    height: 70px;
+    width: 70px;
+    border: 2px solid #CAB691;
+    padding-bottom: 0px;
+}
+
+.vonal {
+    height: 60px;
+    width: 70px;
+    padding-top: 0px;
+    margin-top: -60px;
+}
+
+.icon_alatt_szoveg {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 0;
+    margin-top: -20px;
+}
+
+/* Footer */
+footer {
+    flex-basis: 100%;
+    display: flex;
+    background-color: #CAB691;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+/* Urlap */
+
+.kontener {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.foglalasurlap {
+    border: 2px solid #CAB691;
+    border-radius: 3px;
+    flex-basis: 48%;
+    text-align: center;
+}
+
+.datum {
+    border: 2px solid #CAB691;
+    border-radius: 3px;
+    flex-basis: 48%;
+    text-align: center;
+    ;
+}
+
+.belsoszinek {
+    background-color: #CAB691;
+}
+
+.szemelyes {
+    border: 2px solid #CAB691;
+    border-radius: 3px;
+    flex-basis: 98%;
+    text-align: center;
+}
+
+.bekuld {
+
+    flex-basis: 98%;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.spec {
+    height: 70px;
+
+}
+
+.szolgur {
+    border: 2px solid #CAB691;
+    border-radius: 3px;
+    flex-basis: 98%;
+    text-align: center;
+}
+
+
+
+
+/* Apartmanok (menu oldal)*/
+
+.apartman {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: center;
+
+}
+
+.apartmanok {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    border: 3px solid #8A7042;
+    flex-basis: 93%;
+}
+
+.border {
+    border: 2px solid #8A7042;
+    border-radius: 5px;
+}
+
+
+.kep {
+    flex-basis: 98%;
+    text-align: center;
+}
+
+.leiras {
+    flex-basis: 62%;
+    text-align: center;
+}
+
+.foglalas {
+    flex-basis: 30%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+}
+
+.tesztkep {
+    width: 100%;
+    
+}
+
+.nincs_ala {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #CAB691;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #AF905A;
+}
+
+.nincs_ala:hover {
+    background-color: #AF905A;
+    color: black;
+}
+
+.ap_nev {
+    flex-basis: 100%;
+    text-align: center;
+    background-color: #CAB691;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* Galeria */
+.galeria {
+    margin-top: -60px;
+}
+
+/* Reszponziv */
+
+@media all and (min-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        flex-basis: 22%;
+    }
+
+    .apartman{
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    .apartmanok {
+        flex-basis: 98%;
+        gap: 5px;
+    }
+
+    .szemelyes {flex-basis: 48%;}
+
+    .szolgur {flex-basis: 48%;}
+
+}
+
+@media all and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        flex-basis: 22%;
+    }
+
+    .apartman{
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    .apartmanok {
+        flex-basis: 43%;
+        gap: 5px;
+    }
+
+    .szemelyes {flex-basis: 48%;}
+
+    .szolgur {flex-basis: 48%;}
+
+}
