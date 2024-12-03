@@ -2,7 +2,7 @@
 
 1, Készítő: Palatin Simon
 
-2, URL cím:
+2, URL cím: https://palatinsimon.github.io/webfejlesztes/
 
 3, A Balaton északi partján, Balatonalmádi szívében található exkluzív apartmanok. Kitűnő relaxációs lehetőség, hangulatos saját wellness kültéri medencével, szaunával és jakuzzival.
 
